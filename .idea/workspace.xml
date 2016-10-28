@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c9cf038-d833-4e37-ac7d-50d6a5ea2682" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/cui/Utils/BTTools.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/net.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/photo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/spring.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/cui/Utils/RegexTool.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cao/com/cui/Utils/NetTool.class" afterPath="$PROJECT_DIR$/out/production/cao/com/cui/Utils/NetTool.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cao/com/cui/Utils/Util.class" afterPath="$PROJECT_DIR$/out/production/cao/com/cui/Utils/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cao/com/cui/bean/PageBean.class" afterPath="$PROJECT_DIR$/out/production/cao/com/cui/bean/PageBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cao/com/cui/dao/PageDao.class" afterPath="$PROJECT_DIR$/out/production/cao/com/cui/dao/PageDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cao/com/cui/main/Main.class" afterPath="$PROJECT_DIR$/out/production/cao/com/cui/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/cao/com/cui/Utils/PageBeanTest.class" afterPath="$PROJECT_DIR$/out/test/cao/com/cui/Utils/PageBeanTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cao/c3p0-config.xml" afterPath="$PROJECT_DIR$/out/production/cao/c3p0-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/c3p0-config.xml" afterPath="$PROJECT_DIR$/src/c3p0-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/DownloadUtils.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/DownloadUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/HttpClientUtil.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/HttpClientUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/Image.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/Image.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/NetTool.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/NetTool.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/Utils/Util.java" afterPath="$PROJECT_DIR$/src/com/cui/Utils/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/bean/PageBean.java" afterPath="$PROJECT_DIR$/src/com/cui/bean/PageBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/dao/PageDao.java" afterPath="$PROJECT_DIR$/src/com/cui/dao/PageDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cui/main/Main.java" afterPath="$PROJECT_DIR$/src/com/cui/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/cui/Utils/PageBeanTest.java" afterPath="$PROJECT_DIR$/test/com/cui/Utils/PageBeanTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j.properties" afterPath="$PROJECT_DIR$/src/log4j.properties" />
     </list>
     <ignored path="cao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,21 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="c3p0-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cui/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-350">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="513">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,34 +52,86 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/Util.java">
+      <file leaf-file-name="BTTools.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/BTTools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
-              <folding>
-                <marker date="1477656749142" expanded="true" signature="1597:1646" ph="select title... page" />
-                <marker date="1477656749142" expanded="true" signature="2280:2460" ph="insert into page... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="133">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BTTools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/BTTools.java">
+      <file leaf-file-name="DBUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="524">
+              <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DownloadUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+              <folding>
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1057#1058#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpClientUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/HttpClientUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="150" column="17" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/Image.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+              <folding>
+                <marker date="1477667927682" expanded="true" signature="4184:4248" ph="select url f... page" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsoupUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="619">
+              <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MD5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/MD5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-426">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetTool.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/NetTool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-953">
+              <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -100,60 +140,15 @@
       <file leaf-file-name="PageDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cui/dao/PageDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2717">
-              <caret line="155" column="21" selection-start-line="155" selection-start-column="21" selection-end-line="155" selection-end-column="21" />
+            <state relative-caret-position="1018">
+              <caret line="139" column="17" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
               <folding>
-                <marker date="1477638573437" expanded="true" signature="1170:1232" ph="insert into page... " />
-                <marker date="1477638573437" expanded="true" signature="1719:1767" ph="select * fro... page" />
-                <marker date="1477638573437" expanded="true" signature="2358:2404" ph="insert into page... " />
-                <marker date="1477638573437" expanded="true" signature="2358:2446" ph="insert into page... " />
-                <marker date="1477638573437" expanded="true" signature="2891:2932" ph="insert into page... " />
-                <marker date="1477638573437" expanded="true" signature="3975:4100" ph="insert into page1... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2318">
-              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/cui/Utils/DBTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1477618506741" expanded="true" signature="277:321" ph="insert into page... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetTool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/NetTool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8151">
-              <caret line="455" column="25" selection-start-line="455" selection-start-column="25" selection-end-line="455" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageBeanTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/cui/Utils/PageBeanTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <marker date="1477667393163" expanded="true" signature="540:602" ph="insert into page... " />
+                <marker date="1477667393163" expanded="true" signature="1165:1213" ph="select * fro... page" />
+                <marker date="1477667393163" expanded="true" signature="1925:1979" ph="insert into page... " />
+                <marker date="1477667393163" expanded="true" signature="1925:2025" ph="insert into page... " />
+                <marker date="1477667393163" expanded="true" signature="2588:2629" ph="insert into page... " />
+                <marker date="1477667393163" expanded="true" signature="3846:3975" ph="insert into page1... " />
               </folding>
             </state>
           </provider>
@@ -179,18 +174,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java" />
         <option value="$PROJECT_DIR$/test/com/cui/Utils/DBTest.java" />
-        <option value="$PROJECT_DIR$/src/com/cui/Utils/NetTool.java" />
-        <option value="$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java" />
         <option value="$PROJECT_DIR$/src/com/cui/bean/PageBean.java" />
         <option value="$PROJECT_DIR$/test/com/cui/Utils/PageBeanTest.java" />
         <option value="$PROJECT_DIR$/src/com/cui/Utils/BTTools.java" />
         <option value="$PROJECT_DIR$/target/spring.log" />
         <option value="$PROJECT_DIR$/src/c3p0-config.xml" />
-        <option value="$PROJECT_DIR$/src/com/cui/dao/PageDao.java" />
-        <option value="$PROJECT_DIR$/src/com/cui/main/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/log4j.properties" />
         <option value="$PROJECT_DIR$/src/com/cui/Utils/Util.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/dao/PageDao.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/DownloadUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/HttpClientUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/Image.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/RegexTool.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/Utils/NetTool.java" />
+        <option value="$PROJECT_DIR$/src/com/cui/main/Main.java" />
       </list>
     </option>
   </component>
@@ -208,7 +209,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -239,8 +240,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -256,6 +255,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,6 +329,50 @@
               <option name="myItemId" value="cui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -329,6 +390,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -811,14 +874,15 @@
       <workItem from="1477639594883" duration="1504000" />
       <workItem from="1477652730888" duration="597000" />
       <workItem from="1477656439783" duration="350000" />
+      <workItem from="1477663112699" duration="4308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16466000" />
+    <option name="totallyTimeSpent" value="20774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -868,87 +932,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/cui/bean/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/NetTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4427">
-          <caret line="259" column="25" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/cookie.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/cui/Utils/PageBeanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/dao/PageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
-          <caret line="151" column="59" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
-          <folding>
-            <marker date="1477638573437" expanded="true" signature="1170:1232" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="1719:1767" ph="select * fro... page" />
-            <marker date="1477638573437" expanded="true" signature="2358:2404" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="2358:2446" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="2891:2932" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="3975:4100" ph="insert into page1... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/cui/Utils/DBTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1030,12 +1013,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1477638573437" expanded="true" signature="1170:1232" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="1719:1767" ph="select * fro... page" />
-            <marker date="1477638573437" expanded="true" signature="2358:2404" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="2358:2446" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="2891:2932" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="3975:4100" ph="insert into page1... " />
+            <marker date="1477667393163" expanded="true" signature="540:602" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="1165:1213" ph="select * fro... page" />
+            <marker date="1477667393163" expanded="true" signature="1925:1979" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="1925:2025" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="2588:2629" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="3846:3975" ph="insert into page1... " />
           </folding>
         </state>
       </provider>
@@ -1159,26 +1142,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/cui/Utils/SessionTest.java" />
     <entry file="file://$PROJECT_DIR$/resources/cookie.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,14 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2318">
-          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/cui/Utils/PageBeanTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
@@ -1218,10 +1178,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/BTTools.java">
+    <entry file="file://$PROJECT_DIR$/resources/1.html" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="76">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/spring.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9190">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1229,62 +1206,153 @@
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/1.html" />
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/NetTool.java">
+    <entry file="file://$PROJECT_DIR$/resources/spring.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8151">
-          <caret line="455" column="25" selection-start-line="455" selection-start-column="25" selection-end-line="455" selection-end-column="25" />
+        <state relative-caret-position="19">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+        <state relative-caret-position="323">
+          <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+          <folding>
+            <marker date="1477667073565" expanded="true" signature="1741:1790" ph="select title... page" />
+            <marker date="1477667073565" expanded="true" signature="2424:2604" ph="insert into page... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PageBean.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/tr.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cui/dao/PageDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2717">
-          <caret line="155" column="21" selection-start-line="155" selection-start-column="21" selection-end-line="155" selection-end-column="21" />
+        <state relative-caret-position="1018">
+          <caret line="139" column="17" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
           <folding>
-            <marker date="1477638573437" expanded="true" signature="1170:1232" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="1719:1767" ph="select * fro... page" />
-            <marker date="1477638573437" expanded="true" signature="2358:2404" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="2358:2446" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="2891:2932" ph="insert into page... " />
-            <marker date="1477638573437" expanded="true" signature="3975:4100" ph="insert into page1... " />
+            <marker date="1477667393163" expanded="true" signature="540:602" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="1165:1213" ph="select * fro... page" />
+            <marker date="1477667393163" expanded="true" signature="1925:1979" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="1925:2025" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="2588:2629" ph="insert into page... " />
+            <marker date="1477667393163" expanded="true" signature="3846:3975" ph="insert into page1... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/spring.log" />
-    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/Util.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/BTTools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+        <state relative-caret-position="133">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/DownloadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
           <folding>
-            <marker date="1477656749142" expanded="true" signature="1597:1646" ph="select title... page" />
-            <marker date="1477656749142" expanded="true" signature="2280:2460" ph="insert into page... " />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="150" column="17" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding>
+            <marker date="1477667927682" expanded="true" signature="4184:4248" ph="select url f... page" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/JsoupUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/RegexTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cui/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="513">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cui/Utils/NetTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

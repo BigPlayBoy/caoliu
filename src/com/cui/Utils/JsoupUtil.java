@@ -84,22 +84,6 @@ public class JsoupUtil {
 		return trs;
 	}
 
-	public static Element getTd(Elements tr) {
-		return tr.get(1);// 获得帖子的入口
-	}
-
-	public static Elements getTds() {
-		Elements tds = null;
-		File input = new File("net.html");
-		Document doc;
-		try {
-			doc = Jsoup.parse(input, "gb2312", "");
-			tds = doc.getElementsByTag("td");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return tds;
-	}
 
 	/**
 	 * 匹配出所有的网址 放到堆栈中
@@ -164,7 +148,6 @@ public class JsoupUtil {
 		System.out.println("获取网页：" + url);
 		String page = NetTool.doGetPhoto(url);
 		Elements input = JsoupUtil.getInput(page);
-		
 		return in;
 	}
 	
@@ -172,7 +155,6 @@ public class JsoupUtil {
 		Document doc=Jsoup.parse(page);
 		Elements inputs=doc.children();
 		System.out.println(inputs);
-		
 		return inputs;
 	}
 	

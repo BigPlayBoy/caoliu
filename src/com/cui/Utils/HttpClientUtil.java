@@ -78,10 +78,8 @@ public class HttpClientUtil {
 	}
 
 	/**
-	 * 
-	 * @param pathname文件保存路径
-	 * @param photoname文件名
-	 * @param url文件的网络地址
+	 *
+	 * @param url
 	 * @return
 	 */
 	public static InputStream doGet(String url) {
@@ -100,10 +98,9 @@ public class HttpClientUtil {
 		return null;
 	}
 
-	
-	
+
 	/**
-	 * 没有参数的post
+	 *
 	 * @param url
 	 */
 	public void post(String url) {

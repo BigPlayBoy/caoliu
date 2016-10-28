@@ -65,13 +65,10 @@ public class DBUtil {
 		try {
 			con = dataSource.getConnection();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-//			e.printStackTrace();
 			System.out.println("获取连接失败");
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			con = getConnection();

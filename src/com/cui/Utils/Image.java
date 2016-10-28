@@ -118,7 +118,7 @@ public class Image implements Runnable {
 
 
 
-	@SuppressWarnings("rawtypes")
+
 	public static void downloadImage(String pageUrl) {
 		Document doc = null;
 		Elements tables = null;

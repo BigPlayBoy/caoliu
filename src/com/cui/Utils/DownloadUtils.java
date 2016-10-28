@@ -48,27 +48,21 @@ public class DownloadUtils implements Runnable {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-
 		DownloadUtils.downloadPhoto(this.pathname, this.photoname, this.url);
-		
 	}
 
 	public static boolean fun1() {
 		for (int i = 0; i < 100; i++) {
 			System.out.println("当前fun1输出的值：" + i);
 		}
-
 		return false;
 	}
 
-	
-
 	/**
-	 * 
-	 * @param pathname文件保存路径
-	 * @param photoname文件名
-	 * @param url文件的网络地址
+	 *
+	 * @param pathname
+	 * @param photoname
+	 * @param url
 	 * @return
 	 */
 	public static boolean downloadPhoto(String pathname, String photoname, String url) {
@@ -102,7 +96,6 @@ public class DownloadUtils implements Runnable {
 				System.out.println("延时出错！");
 			}
 			while ((len = inputStream.read(data)) != -1) {
-//				System.out.print(".");
 				fos.write(data, 0, len);
 				fos.flush();
 			}

@@ -1,6 +1,9 @@
 package com.cui.Utils;
 
 import com.cui.bean.PageBean;
+import com.cui.main.Main;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -14,6 +17,7 @@ import java.sql.Statement;
 import java.util.Date;
 
 public class Util {
+    static Logger log = LoggerFactory.getLogger(Util.class);
     // 下载图片
 
     /**
@@ -114,14 +118,14 @@ public class Util {
             if (file1.isFile()) {
                 {
                     if (file1.toString().matches(reg)) {
-                        System.out.println("Delete:" + file1);
+//                        System.out.println("Delete:" + file1);
                         file1.delete();
                         i++;
                     }
                 }
             }
         }
-        System.out.println("一共删除了" + i + "个文件");
+        log.info("一共删除了" + i + "个文件");
         return true;
     }
 }

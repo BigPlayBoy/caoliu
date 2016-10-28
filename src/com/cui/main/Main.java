@@ -21,15 +21,16 @@ public class Main {
     @SuppressWarnings("rawtypes")
     public static void main(String[] args) {
         // 第一步，获得达盖尔的网址
-        int i = 10;
-        int pagenum = 100;
+        int i = 2;
+        int pagenum = 101;
         log.info("开始");
         String url_head="http://dz.a5v.biz/";
 //		String URL = "http://dc.ididcl.co/thread0806.php?fid=8&search=&page=";
-        String URL = "http://dz.a5v.biz/thread0806.php?fid=4&search=&page=";
+        String URL = "http://dz.a5v.biz/thread0806.php?fid=8&search=&page=";//8 新时代
         while (i < pagenum) {
             String newurl = URL + i++;
-            String cookie = NetTool.getOffCookie(newurl);
+//            String cookie = NetTool.getOffCookie(newurl);
+            String cookie = null;
             log.info("获取网页：" + newurl);
             String page = NetTool.doGet(newurl, cookie);
             saveBtPage(url_head, page,i);
@@ -54,6 +55,7 @@ public class Main {
     }
     private static void saveBtPage(String url_head, String page,int i) {
         Element table = JsoupUtil.getTable(page, 4);
+        int result=0;
 //        System.out.println(table);
         Elements h3s = table.getElementsByTag("h3");
 //        System.out.println(h3s);
@@ -61,7 +63,7 @@ public class Main {
             Element element = (Element) iterator.next();
             Element a_element = element.getElementsByTag("a").first();
 //            System.out.println(a_element);
-           int result= PageDao.addUrl(url_head+a_element.attr("href"), a_element.text().replace("'",""));
+           result= PageDao.addUrl(url_head+a_element.attr("href"), a_element.text().replace("'",""));
             if(result!=2){
                 log.error("出问题页面："+i);
             }
