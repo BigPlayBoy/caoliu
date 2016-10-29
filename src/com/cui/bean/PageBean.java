@@ -71,7 +71,7 @@ public class PageBean {
 
 	@Override
 	public String toString() {
-		return "PageBean [id=" + id + ", title=" + title + ", url_md5=" + url_md5 + ", Page_URL=" + Page_URL
+		return "PageBean [id=" + id + ", imageName=" + title + ", url_md5=" + url_md5 + ", Page_URL=" + Page_URL
 				+ ", create_date=" + create_date + "]";
 	}
 

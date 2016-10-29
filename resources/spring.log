@@ -1,1 +1,7 @@
 2016-10-28 23:04:10,600 INFO [com.cui.Utils.Util] - 一共删除了0个文件
+2016-10-29 16:27:18,158 INFO [FileTool.class] - 读取文件成功
+2016-10-29 16:27:18,158 INFO [FileTool.class] - 写入文件成功！文件名：e:\798.html
+2016-10-29 16:37:41,994 INFO [FileTool.class] - 读取文件成功
+2016-10-29 16:37:41,994 INFO [FileTool.class] - 写入文件成功！文件名：e:\798.html
+2016-10-29 16:38:06,765 INFO [FileTool.class] - 读取文件成功
+2016-10-29 16:38:06,797 INFO [FileTool.class] - 写入文件成功！文件名：e:\798.html

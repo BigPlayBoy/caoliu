@@ -9,7 +9,7 @@
             <!-- 主键生成策略 asigned手工赋值方式  native根据数据库-->
             <generator class="native" />
         </id>
-        <property name="title" type="java.lang.String">
+        <property name="imageName" type="java.lang.String">
             <column name="TITLE" />
         </property>
         <property name="url_md5" type="java.lang.String">

@@ -131,7 +131,7 @@ public class HttpClientUtil {
 //			try {
 //				httpclient.close();
 //			} catch (IOException e) {
-//				log.error(e);
+//				logger.error(e);
 //			}
 		}
 	}
@@ -176,7 +176,7 @@ public class HttpClientUtil {
 //			try {
 //				httpclient.close();
 //			} catch (IOException e) {
-//				log.error(e);
+//				logger.error(e);
 //			}
 		}
 	}
