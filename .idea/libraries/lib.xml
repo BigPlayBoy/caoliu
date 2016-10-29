@@ -33,6 +33,8 @@
       <root url="jar://$PROJECT_DIR$/lib/httpclient-win-4.5.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/dom4j-1.6.1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

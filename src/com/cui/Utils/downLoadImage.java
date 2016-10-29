@@ -28,11 +28,12 @@ public class downLoadImage implements Runnable {
 
     /**
      * @param pathname  文件保存路径
-     * @param photoname 文件名
+     * @param photoName 文件名
      * @param url       文件的网络地址
      * @return
      */
-    public static boolean downloadPhoto(String pathname, String photoname, String url) {
+    public static boolean downloadPhoto(String pathname, String photoName, String url) {
+        logger.info("开始下载" + photoName);
         HttpGet httpGet = new HttpGet(url);
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
         FileOutputStream fileOutputStream = null;
@@ -49,17 +50,15 @@ public class downLoadImage implements Runnable {
             if (!file.exists()) {
                 file.mkdirs();
             }
-            fileOutputStream = new FileOutputStream(pathname + "/" + photoname);
+            fileOutputStream = new FileOutputStream(pathname + "/" + photoName);
             byte[] data = new byte[20 * 1024];
-            int len = 0;
+            int len;
             while ((len = inputStream.read(data)) != -1) {
                 fileOutputStream.write(data, 0, len);
                 fileOutputStream.flush();
             }
-
             return true;
         } catch (IOException e) {
-            // e.printStackTrace();
             logger.error("在downloadPhoto中IO异常！" + e);
         } finally {
             try {
@@ -121,6 +120,6 @@ public class downLoadImage implements Runnable {
         String url = "http://imgbbs.heiguang.net/forum/201510/06/104432cjc7c8tx7xxqqkgq.jpg";
         String photoName = url.substring(url.lastIndexOf("/") + 1, url.length());
         System.out.println(photoName);
-        downloadPhoto(pathname,photoName,url);
+        downloadPhoto(pathname, photoName, url);
     }
 }
