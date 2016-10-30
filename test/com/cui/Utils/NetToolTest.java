@@ -21,7 +21,8 @@ public class NetToolTest {
         HttpGet httpGet = new HttpGet(url);
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
         InputStream inputStream = null;
-        String result = null;
+        String pathname = "e:/";
+        String photoName = "3.jpg";
         try {
             // 客户端开始向指定的网址发送请求
             HttpResponse httpResponse = closeableHttpClient.execute(httpGet);
@@ -29,10 +30,7 @@ public class NetToolTest {
                 logger.error("获取失败 跳过此文件");
             }
             inputStream = httpResponse.getEntity().getContent();
-            byte[] data = new byte[20 * 1024];
-            while (inputStream.read(data) != -1) {
-                result += data.toString();
-            }
+            NetTool.savePhoto(pathname, photoName, inputStream);
         } catch (IOException e) {
             logger.error("在downloadPhoto中IO异常！" + e);
         } finally {
@@ -44,7 +42,5 @@ public class NetToolTest {
                 e.printStackTrace();
             }
         }
-        File file = new File("e:/1.jpg");
-        FileTool.saveFile(result, file);
     }
 }

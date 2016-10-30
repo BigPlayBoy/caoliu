@@ -2,7 +2,6 @@ package com.cui.main;
 
 import java.util.Iterator;
 
-import com.cui.Utils.downLoadImage;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
@@ -37,10 +36,9 @@ public class Main {
         System.out.println(input.size());
         for(Iterator iterator = input.iterator(); iterator.hasNext();){
             Element element = (Element) iterator.next();
-//            System.out.println("链接："+element.attr("src"));
             String imageUrl = element.attr("src");
             String photoName = imageUrl.substring(imageUrl.lastIndexOf("/") + 1, imageUrl.length());
-            downLoadImage.downloadPhoto(pathname,photoName,imageUrl);
+            NetTool.downloadPhoto(pathname,photoName,imageUrl);
         }
     }
 

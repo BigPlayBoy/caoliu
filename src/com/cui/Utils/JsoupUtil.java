@@ -135,19 +135,6 @@ public class JsoupUtil {
         return null;
     }
 
-    public static BufferedInputStream getPhotoStream() {
-        BufferedInputStream in = null;
-        String URL = "http://dc.ididcl.co/thread0806.php?fid=16&search=&page=";
-        String url = "http://www.datuimg.com/images/20160109074439dxgqc2692a.jpg";
-
-        String cookie = NetTool.getOffCookie(URL);
-        System.out.println("获取网页：" + url);
-
-        String page = NetTool.doGetPhoto(url, cookie);
-        Elements input = JsoupUtil.getInput(page);
-        return in;
-    }
-
     public static Elements getInput(String page) {
         Document doc = Jsoup.parse(page);
         Elements inputs = doc.children();

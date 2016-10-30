@@ -14,7 +14,7 @@ import java.io.*;
 public class FileTool {
     static Logger logger = LoggerFactory.getLogger("FileTool.class");
 
-    static String readFile(File file, String code) {
+     static String readFile(File file, String code) {
         String string = null;
         BufferedReader bufferedReader = null;
         try {
@@ -37,7 +37,7 @@ public class FileTool {
         return string;
     }
 
-    public static boolean saveFile(String string, File filePath) {
+     static boolean saveFile(String string, File filePath) {
         PrintWriter printWriter = null;
         if (string == null) {
             logger.error("待写入信息为空，请确认后再次写入");
@@ -45,21 +45,22 @@ public class FileTool {
         }
         try {
             printWriter = new PrintWriter(filePath);
+            printWriter.print(string);
+            logger.info("写入文件成功！文件名：" + filePath);
+            printWriter.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             logger.error("写入文件出错！文件名:" + filePath);
         }
-        printWriter.print(string);
-        printWriter.close();
-        logger.info("写入文件成功！文件名：" + filePath);
         return true;
     }
 
+
     public static void main(String[] args) {
         File file = new File("e:/799.html");
-        File file1=new File("e:/798.html");
-        String result=readFile(file, "gbk");
+        File file1 = new File("e:/798.html");
+        String result = readFile(file, "gbk");
         System.out.println(result);
-        saveFile("12345",file1);
+        saveFile("12345", file1);
     }
 }

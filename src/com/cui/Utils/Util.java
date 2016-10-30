@@ -1,7 +1,6 @@
 package com.cui.Utils;
 
 import com.cui.bean.PageBean;
-import com.cui.main.Main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,39 +14,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
+import java.util.Stack;
 
 public class Util {
-    static Logger log = LoggerFactory.getLogger(Util.class);
+    static Logger logger = LoggerFactory.getLogger(Util.class);
     // 下载图片
 
-    /**
-     * @param imgUrl  图片的网络路径
-     * @param fileURL 本地保存地址
-     */
-    public static void downloadImage(String imgUrl, String fileURL) {
-        try {
-            // 创建流
-            BufferedInputStream in = new BufferedInputStream(new URL(imgUrl).openStream());
-            // 生成图片名
-            int index = imgUrl.lastIndexOf("/");
-            String sName = imgUrl.substring(index + 1, imgUrl.length());
-            System.out.println(sName);
-            // 存放地址
-            File img = new File(fileURL + sName);
-            // 生成图片
-            BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(img));
-            byte[] buf = new byte[2048];
-            int length = in.read(buf);
-            while (length != -1) {
-                out.write(buf, 0, length);
-                length = in.read(buf);
-            }
-            in.close();
-            out.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public static void addurl(int id) {
         String url = "http://dz.a5v.biz/";
@@ -67,7 +39,7 @@ public class Util {
             pageBean.setUrl_md5(resultSet.getString(2));
             pageBean.setCreate_date(new Date().toString());
         } catch (Exception e) {
-            System.out.println("ops 出了点错");
+            logger.error("ops 出了点错" + e);
             e.printStackTrace();
         } finally {
             DBUtil.releaseDB(state, con);
@@ -80,7 +52,7 @@ public class Util {
             con = DBUtil.getConnection();
             state = con.createStatement();
             state.executeUpdate(insertSql);
-            System.out.println("更新成功！");
+            logger.info("更新成功！");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -89,7 +61,7 @@ public class Util {
             con = DBUtil.getConnection();
             state = con.createStatement();
             state.executeUpdate(deleteSql);
-            System.out.println("删除成功！");
+            logger.info("删除成功！");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -115,17 +87,39 @@ public class Util {
         File file = new File(path);
         File[] tempList = file.listFiles();
         for (File file1 : tempList) {
-            if (file1.isFile()) {
+            if (file1.isFile() || file1.toString().matches(reg)) {
                 {
-                    if (file1.toString().matches(reg)) {
-//                        System.out.println("Delete:" + file1);
-                        file1.delete();
-                        i++;
-                    }
+                    file1.delete();
+                    i++;
                 }
             }
         }
-        log.info("一共删除了" + i + "个文件");
+        logger.info("一共删除了" + i + "个文件");
         return true;
+    }
+
+    public static Stack<String> getPhotoUrl(int begin, int end) {
+        Connection con = null;
+        Statement state = null;
+        ResultSet rs = null;
+
+        Stack<String> urlStack = new Stack<String>();
+        String sql = "select url from page where url like '%html' limit " + begin + "," + end;
+        System.err.println(sql);
+        try {
+            con = DBUtil.getConnection();
+            state = con.createStatement();
+            rs = state.executeQuery(sql);
+            while (rs.next()) {
+                urlStack.push(rs.getString("url"));
+                // urlStack.push(rs.getString("title"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            logger.error("从数据库获取信息出错" + e);
+        } finally {
+            DBUtil.releaseDB(rs, state, con);
+        }
+        return urlStack;
     }
 }

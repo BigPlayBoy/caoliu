@@ -1,11 +1,11 @@
 package com.cui.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.Stack;
 
 import com.cui.Utils.DBUtil;
@@ -36,8 +36,8 @@ public class PageDao {
         return false;
     }
 
-    public static boolean isExist(String urlmd5) {
-        String sql = "select * from page where urlmd5='" + urlmd5 + "';";
+    public static boolean isExist(String urlMd5) {
+        String sql = "select * from page where urlmd5='" + urlMd5 + "';";
         Connection conn = null;
         Statement state = null;
         ResultSet rs = null;
@@ -58,7 +58,7 @@ public class PageDao {
     }
 
     /**
-     * 返回值为1本链接已存在 不需要添加 返回值为2链接不存在添加成功 返回值为3出错
+     * 返回值为1本链接已存在 返回值为2链接不存在添加成功 返回值为3出错
      *
      * @param url
      * @return
@@ -85,58 +85,53 @@ public class PageDao {
 
     public static int addUrl(Stack<String> urls) {
         // 一次添加一个栈的数据
-        String sqlhead = "insert into page(page_url,url_md5) values";
+        String sqlhead = "insert into page(page_url,url_md5,create_date) values";
         String sqlbody = "";
         String sqlend = ";";
+        String create_date = String.valueOf(new Date().getTime());
         boolean flag = true;
         while (!urls.isEmpty()) {
             String url = urls.pop();
-            String urlmd5 = MD5.GetMD5Code(url);
-            if (PageDao.isExist(urlmd5)) {
+            String urlMd5 = MD5.GetMD5Code(url);
+            if (PageDao.isExist(urlMd5)) {
                 continue;
             }
-            if (flag) {
-                flag = false;
-                sqlbody = sqlbody + " ('" + url + "','" + urlmd5 + "') ";
+            if (!flag) {
+                sqlbody = sqlbody + " ,('" + url + "','" + urlMd5 + "','" + create_date + "') ";
             } else {
-                sqlbody = sqlbody + " ,('" + url + "','" + urlmd5 + "') ";
+                flag = false;
+                sqlbody = sqlbody + " ('" + url + "','" + urlMd5 + "','" + create_date + "') ";
             }
         }
         String sql = sqlhead + sqlbody + sqlend;
-        System.out.println(sql);
-        Connection con = null;
-        Statement state = null;
-        try {
-            con = DBUtil.getConnection();
-            state = con.createStatement();
-            state.executeUpdate(sql);
-            return 2;
-        } catch (Exception e) {
-            log.info("ops 出了点错" + e);
-        } finally {
-            DBUtil.releaseDB(state, con);
-        }
+        log.info("SQL语句为" + sql);
+        if (update(sql)) return 2;
         return 0;
     }
 
-    public static int save(PageBean pageBean) {
-        String urlmd5 = MD5.GetMD5Code(pageBean.getPage_URL());
-        if (PageDao.isExist(urlmd5)) {
+    public static int savePageBean(PageBean pageBean) {
+        String urlMd5 = pageBean.getUrl_md5();
+        if (PageDao.isExist(urlMd5)) {
             return 1;
         }
-        String sql = "insert into page1(title,page_url,url_md5) values('" + pageBean.getTitle() + "','" + pageBean.getPage_URL() + "','" + urlmd5 + "');";
+        String sql = "insert into page1(title,page_url,url_md5,create_date) values('" + pageBean.getTitle() + "','" + pageBean.getPage_URL() + "','" + urlMd5 + "','" + pageBean.getCreate_date() + "');";
+        if (update(sql)) return 2;
+        return 3;
+    }
+
+    private static boolean update(String sql) {
         Connection con = null;
         Statement state = null;
         try {
             con = DBUtil.getConnection();
             state = con.createStatement();
             state.executeUpdate(sql);
-            return 2;
+            return true;
         } catch (Exception e) {
-            log.info("ops 出了点错" + sql + e);
+            log.info("update数据库 出了点错" + sql + e);
         } finally {
             DBUtil.releaseDB(state, con);
         }
-        return 3;
+        return false;
     }
 }
