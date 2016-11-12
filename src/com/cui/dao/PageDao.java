@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 
 //完成增删改查
 public class PageDao {
-    static Logger log = LoggerFactory.getLogger(PageDao.class);
+    static Logger logger = LoggerFactory.getLogger(PageDao.class);
 
     // 插入新的对象
     public boolean addPage(PageBean pageBean) {
@@ -31,13 +31,13 @@ public class PageDao {
             pres.setString(4, pageBean.getCreate_date());
             pres.execute();
         } catch (SQLException e) {
-            log.info("插入数据出错" + e);
+            logger.info("插入数据出错" + e);
         }
         return false;
     }
 
     public static boolean isExist(String urlMd5) {
-        String sql = "select * from page where urlmd5='" + urlMd5 + "';";
+        String sql = "select * from BTfile where url_md5='" + urlMd5 + "';";
         Connection conn = null;
         Statement state = null;
         ResultSet rs = null;
@@ -49,7 +49,8 @@ public class PageDao {
                 return true;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            logger.error("查询连接是否存在出错："+e);
         } finally {
             DBUtil.releaseDB(rs, state, conn);
         }
@@ -59,13 +60,16 @@ public class PageDao {
 
     /**
      * 返回值为1本链接已存在 返回值为2链接不存在添加成功 返回值为3出错
-     *
+     *BTfile 亚洲步兵
      * @param url
      * @return
      */
     public static int addUrl(String url, String title) {
-        String urlmd5 = MD5.GetMD5Code(url);
-        String sql = "insert into page_xinshidai(title,url,url_md5) values('" + title + "','" + url + "','" + urlmd5 + "');";
+        String urlMd5 = MD5.GetMD5Code(url);
+        if(isExist(urlMd5)){
+            return 1;
+        }
+        String sql = "insert into BTfile(title,url,url_md5) values('" + title + "','" + url + "','" + urlMd5 + "');";
 //        System.out.println(sql);
         Connection con = null;
         Statement state = null;
@@ -75,8 +79,9 @@ public class PageDao {
             state.executeUpdate(sql);
             return 2;
         } catch (Exception e) {
-            log.error("ops 出了点错" + sql);
-            e.printStackTrace();
+            logger.error("ops 出了点错" + sql);
+            logger.error(""+e);
+//            e.printStackTrace();
         } finally {
             DBUtil.releaseDB(state, con);
         }
@@ -104,7 +109,7 @@ public class PageDao {
             }
         }
         String sql = sqlhead + sqlbody + sqlend;
-        log.info("SQL语句为" + sql);
+        logger.info("SQL语句为" + sql);
         if (update(sql)) return 2;
         return 0;
     }
@@ -128,7 +133,7 @@ public class PageDao {
             state.executeUpdate(sql);
             return true;
         } catch (Exception e) {
-            log.info("update数据库 出了点错" + sql + e);
+            logger.info("update数据库 出了点错" + sql + e);
         } finally {
             DBUtil.releaseDB(state, con);
         }

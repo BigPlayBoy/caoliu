@@ -19,7 +19,7 @@ public class DBTool {
 
 
     /**
-     * 查询数据库
+     * 查询数据库,这个有问题！！！！
      *
      * @param sql 待执行语句
      * @return 查询结果集
@@ -83,5 +83,24 @@ public class DBTool {
         } finally {
             DBUtil.releaseDB(statement, connection);
         }
+    }
+
+    public static void main(String[] args) {
+        //测试增删改查
+        String insert = "insert into page(title,page_url) values('ceshi','baidu.com')";
+        String delete = "delete from page where id=20581";
+        String update = "update page set title='ceshiyongli' where id=20581";
+        String select = "select * from page where id= 20581";
+//        insert(insert);
+//        update(update);
+//        ResultSet select1 = select(select);
+//        try {
+//            while (select1.next()){
+//                System.out.println(select1.getString(2));
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+        delete(delete);
     }
 }

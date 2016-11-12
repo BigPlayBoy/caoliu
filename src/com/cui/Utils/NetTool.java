@@ -52,8 +52,7 @@ public class NetTool {
             }
         } catch (Exception e) {
             logger.info("发送GET请求出现异常！" + e);
-        }
-        finally {
+        } finally {
             try {
                 if (in != null) {
                     in.close();
@@ -108,7 +107,7 @@ public class NetTool {
     /**
      * urlconnection通用设置
      *
-     * @param cookie cookie
+     * @param cookie        cookie
      * @param urlNameString url
      * @return
      * @throws IOException
@@ -144,15 +143,23 @@ public class NetTool {
         logger.info("开始下载" + photoName);
         HttpGet httpGet = new HttpGet(url);
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+        System.out.print(".");
         InputStream inputStream = null;
         try {
             // 客户端开始向指定的网址发送请求
             HttpResponse httpResponse = closeableHttpClient.execute(httpGet);
+            System.out.print(".");
             if (httpResponse.getStatusLine().getStatusCode() != 200) {
                 logger.error("获取失败 跳过此文件");
                 return false;
             }
             inputStream = httpResponse.getEntity().getContent();
+            System.out.print(".");
+            File file = new File(pathname);
+            if (!file.exists()) {
+                file.mkdirs();
+            }
+            System.out.print(".");
             savePhoto(pathname, photoName, inputStream);
         } catch (IOException e) {
             logger.error("在downloadPhoto中IO异常！" + e);
@@ -178,6 +185,7 @@ public class NetTool {
             fileOutputStream.flush();
         }
         fileOutputStream.close();
+        System.out.print(".");
         return true;
     }
 }
